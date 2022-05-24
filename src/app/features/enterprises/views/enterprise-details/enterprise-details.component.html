@@ -1,0 +1,37 @@
+<div>
+
+  <div>
+    <button mat-button (click)="backTo()">Retour</button>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <h1></h1>
+
+    <div *ngFor="let details of bizDetails" fxFlex="20%" fxFlex.xs="50%" fxFlex.sm="25%">
+      <mat-card class="details-card mat-elevation-z4">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{details.year}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            <mat-card-subtitle>Chiffre d'affaire:</mat-card-subtitle>
+            {{details.ca}}</p>
+          <p>
+            <mat-card-subtitle>Marges:</mat-card-subtitle>
+            {{details.margin}}</p>
+          <p>
+            <mat-card-subtitle>BAIIA:</mat-card-subtitle>
+            {{details.ebitda}}</p>
+          <p>
+            <mat-card-subtitle>Pertes:</mat-card-subtitle>
+            {{details.loss}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+
+</div>
+
+
